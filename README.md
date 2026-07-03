@@ -225,6 +225,7 @@ GitHub: https://github.com/dipanshushende
 
 ---
 
+
 ## Acknowledgements
 
 - SkillCraft Technology – Machine Learning Internship
@@ -233,6 +234,11 @@ GitHub: https://github.com/dipanshushende
 
 
 
+---
+
+## License
+
+This project is developed for educational purposes as part of the **SkillCraft Technology Machine Learning Internship**.
 
 ---
 
