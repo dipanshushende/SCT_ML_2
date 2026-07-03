@@ -1,36 +1,30 @@
-# Customer Segmentation using K-Means Clustering
+# Customer Segmentation Analysis using K-Means Clustering
 
-> A Machine Learning project that applies the **K-Means Clustering** algorithm to segment retail customers based on their purchasing behavior, enabling data-driven customer analysis and targeted marketing strategies.
-
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?logo=scikitlearn)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-black?logo=pandas)
+A machine learning project that applies the **K-Means Clustering** algorithm to segment retail customers based on purchasing behavior. This project demonstrates a complete unsupervised learning workflow, from data preprocessing and exploratory data analysis to customer segmentation and business insight generation.
 
 ---
 
 ## Overview
 
-Customer segmentation is one of the most important applications of Unsupervised Machine Learning in business analytics.
+Customer segmentation is one of the most valuable applications of unsupervised machine learning in retail analytics. By identifying customers with similar purchasing characteristics, businesses can design personalized marketing campaigns, improve customer retention, and make data-driven strategic decisions.
 
-This project leverages the **K-Means Clustering** algorithm to identify groups of customers with similar purchasing characteristics. By discovering natural customer segments, businesses can improve marketing campaigns, personalize customer experiences, and make informed strategic decisions.
-
-The project follows a complete data science workflow—from data preprocessing and exploratory analysis to clustering, visualization, and interpretation of results.
+In this project, the **K-Means Clustering** algorithm is implemented using the **Mall Customers Dataset** to discover meaningful customer groups based on annual income and spending score.
 
 ---
 
 ## Problem Statement
 
-Retail businesses often collect large amounts of customer data but struggle to transform it into actionable insights.
+Retail businesses often collect large volumes of customer data but struggle to transform it into actionable insights.
 
-The objective of this project is to automatically group customers into meaningful clusters based on purchasing behavior, helping organizations understand different customer profiles without relying on predefined labels.
+The objective of this project is to automatically group customers with similar purchasing behaviors using the K-Means Clustering algorithm, enabling businesses to better understand customer segments and optimize marketing strategies.
 
 ---
 
 ## Dataset
 
-The project uses the **Mall Customer Dataset**, which contains demographic and spending information for customers.
+**Dataset:** Mall Customers Dataset
 
-### Features
+The dataset contains customer demographic and spending information collected from a retail shopping mall.
 
 | Feature | Description |
 |---------|-------------|
@@ -38,18 +32,19 @@ The project uses the **Mall Customer Dataset**, which contains demographic and s
 | Gender | Customer gender |
 | Age | Customer age |
 | Annual Income (k$) | Annual income in thousand dollars |
-| Spending Score (1–100) | Spending behavior score assigned by the mall |
+| Spending Score (1-100) | Spending behavior score assigned by the mall |
 
 ---
 
-## Objectives
+## Project Objectives
 
-- Understand customer purchasing behavior
-- Perform data preprocessing
-- Identify the optimal number of customer clusters
-- Apply the K-Means clustering algorithm
+- Explore customer purchasing behavior
+- Perform exploratory data analysis (EDA)
+- Select relevant features for clustering
+- Determine the optimal number of clusters using the Elbow Method
+- Train a K-Means Clustering model
 - Visualize customer segments
-- Interpret business insights from each cluster
+- Generate business insights from customer groups
 
 ---
 
@@ -64,100 +59,127 @@ The project uses the **Mall Customer Dataset**, which contains demographic and s
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```
-Customer-Segmentation-KMeans/
+SCT_ML_2/
 │
 ├── Mall_Customer.ipynb
 ├── Mall_Customers.csv
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 └── images/
 ```
 
 ---
 
-## Machine Learning Workflow
+## Project Workflow
 
-1. Import Libraries
-2. Load Dataset
-3. Data Exploration
-4. Data Cleaning
-5. Feature Selection
-6. Feature Scaling
-7. Determine Optimal Clusters (Elbow Method)
-8. Train K-Means Model
-9. Customer Segmentation
-10. Cluster Visualization
-11. Business Insights
+### 1. Data Collection
+
+- Load the Mall Customers Dataset
+
+### 2. Data Exploration
+
+- Understand dataset structure
+- Check missing values
+- Explore feature distributions
+
+### 3. Data Preprocessing
+
+- Select relevant features
+- Prepare data for clustering
+
+### 4. Model Development
+
+- Apply the Elbow Method
+- Determine the optimal value of K
+- Train the K-Means Clustering model
+
+### 5. Customer Segmentation
+
+- Assign customers to clusters
+- Visualize customer groups
+
+### 6. Business Insights
+
+- Analyze characteristics of each customer segment
+- Interpret customer purchasing patterns
 
 ---
 
 ## K-Means Clustering
 
-K-Means is an Unsupervised Machine Learning algorithm that partitions data into **K distinct clusters**.
+K-Means is an unsupervised machine learning algorithm used to partition unlabeled data into K distinct clusters.
 
-Each customer is assigned to the nearest centroid, and the algorithm iteratively updates cluster centers until convergence.
+The algorithm works by:
 
-This enables businesses to identify groups of customers with similar purchasing behavior without requiring labeled data.
+- Initializing cluster centroids
+- Assigning each customer to the nearest centroid
+- Updating centroid locations
+- Repeating the process until convergence
+
+This approach enables businesses to discover natural customer groups without predefined labels.
 
 ---
 
 ## Model Evaluation
 
-The project uses the **Elbow Method** to determine the optimal number of clusters by analyzing the Within-Cluster Sum of Squares (WCSS).
+The optimal number of clusters is determined using the **Elbow Method**, which analyzes the Within-Cluster Sum of Squares (WCSS).
 
-Visualization techniques are then used to interpret customer groups effectively.
+The resulting customer clusters are visualized to evaluate segmentation quality and support business interpretation.
 
 ---
 
-## Business Value
+## Results
 
-The generated customer segments can support:
+The K-Means model successfully identifies distinct customer segments based on annual income and spending score.
 
-- Personalized Marketing Campaigns
-- Customer Retention Strategies
-- Product Recommendation Systems
-- Loyalty Program Design
+These customer groups can support:
+
+- Personalized Marketing
+- Customer Retention
+- Product Recommendation
 - Targeted Advertising
+- Loyalty Program Design
 - Revenue Optimization
 
 ---
 
 ## Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Customer-Segmentation-KMeans.git
+git clone https://github.com/dipanshushende/SCT_ML_2.git
 ```
 
-Navigate to the project directory
+Navigate to the project directory:
 
 ```bash
-cd Customer-Segmentation-KMeans
+cd SCT_ML_2
 ```
 
-Install dependencies
+Install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib scikit-learn jupyter
 ```
 
-Launch Jupyter Notebook
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
----
+Open:
 
-## Results
+```
+Mall_Customer.ipynb
+```
 
-The K-Means model successfully segments customers into meaningful groups based on purchasing behavior.
-
-These clusters provide valuable insights that can be leveraged by businesses for strategic decision-making and customer-focused marketing initiatives.
+Run all notebook cells sequentially.
 
 ---
 
@@ -165,10 +187,10 @@ These clusters provide valuable insights that can be leveraged by businesses for
 
 - Silhouette Score Evaluation
 - Principal Component Analysis (PCA)
-- Hierarchical Clustering Comparison
-- DBSCAN Implementation
+- Hierarchical Clustering
+- DBSCAN Clustering
 - Interactive Dashboard using Streamlit
-- Real-Time Customer Segmentation API
+- Deployment using Flask
 
 ---
 
@@ -177,12 +199,19 @@ These clusters provide valuable insights that can be leveraged by businesses for
 - Data Analysis
 - Exploratory Data Analysis (EDA)
 - Data Visualization
-- Feature Engineering
 - Unsupervised Machine Learning
 - K-Means Clustering
 - Business Analytics
-- Scikit-learn
 - Python Programming
+- Scikit-learn
+
+---
+
+## Repository
+
+**GitHub Repository**
+
+https://github.com/dipanshushende/SCT_ML_2
 
 ---
 
@@ -190,8 +219,21 @@ These clusters provide valuable insights that can be leveraged by businesses for
 
 **Dipanshu Shende**
 
-Machine Learning Enthusiast
+Machine Learning Enthusiast | Python Developer | Data Science Learner
+
+GitHub: https://github.com/dipanshushende
+
+---
+
+## Acknowledgements
+
+- SkillCraft Technology – Machine Learning Internship
+- Scikit-learn Documentation
+- Mall Customer Dataset
+
+
 
 
 ---
 
+### ⭐ If you found this project useful, consider giving it a star!
