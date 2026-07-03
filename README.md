@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?logo=scikitlearn)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-black?logo=pandas)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
